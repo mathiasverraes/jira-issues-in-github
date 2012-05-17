@@ -1,6 +1,6 @@
 {
     "name": "Jira Issues In Github",
-    "version": "1.0", 
+    "version": "1.0",
     "manifest_version": 2,
     "description": "Turn Jira issue numbers (like XX-123) in GitHub into links.",
     "content_scripts": [
@@ -9,7 +9,7 @@
                 "https://github.com/*"
             ],
             "js": [
-            	"jquery.min.js",
+                "jquery.min.js",
                 "jira-issues-in-github.js"
             ]
         }
@@ -17,5 +17,11 @@
     "permissions": [
         "tabs",
         "https://github.com/*"
-    ]
+    ],
+    "options_page": "options.html",
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    }
 }

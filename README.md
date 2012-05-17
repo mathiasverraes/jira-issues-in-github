@@ -1,10 +1,8 @@
 Jira Issues in GitHub
 =====================
 
-Chrome extension that renders Jira issue numbers (XY-123) into links to Jira. It's extremely limited at the moment:
-
-- only in the title of a pull request
-- the jira url is hardcoded
+Chrome extension that renders Jira issue numbers (XY-123) into links to Jira. It's currently limited 
+to the title of the pull request.
 
 Installation
 ------------
@@ -13,4 +11,5 @@ Installation
 - Go to your Chrome extensions
 - Turn on Developer mode
 - Load unpacked extension
+- Click the options link and set your Jira url
 - Go to a pull request with a Jira issue in the title; it should be a link now
