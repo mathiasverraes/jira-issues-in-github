@@ -10,7 +10,7 @@
             ],
             "js": [
                 "jquery.min.js",
-                "jira-issues-in-github.js"
+                "content.js"
             ]
         }
     ],
