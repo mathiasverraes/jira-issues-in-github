@@ -11,5 +11,5 @@ Installation
 - Go to your Chrome extensions
 - Turn on Developer mode
 - Load unpacked extension
-- Click the options link and set your Jira url
-- Go to a pull request with a Jira issue in the title; it should be a link now
+- Go to GitHub, and click the Jira icon that appears in the browser's address bar
+

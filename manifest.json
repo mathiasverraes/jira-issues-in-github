@@ -23,5 +23,11 @@
         "scripts": [
             "background.js"
         ]
-    }
+    },
+    "page_action": {
+	    "default_icon": "icons/jira.png",
+	    "default_title": "Jira issues in GitHub",
+	    "default_popup": "options.html"
+	 }
+    
 }
