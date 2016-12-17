@@ -1,7 +1,7 @@
 
 chrome.extension.sendRequest({method: "getLocalStorage", key: "jira"}, function(response) {
 
-	const replaceLinks = function() {
+    const replaceLinks = function() {
         const pattern = /([A-Z]{2,}-\d+)/g;
         const jira = response.data + '/browse/';
 
@@ -22,11 +22,11 @@ chrome.extension.sendRequest({method: "getLocalStorage", key: "jira"}, function(
                 ));
             }
         });
-	};
+    };
 
     $('#js-repo-pjax-container').on('pjax:end', function() {
         replaceLinks();
-	});
+    });
 
     replaceLinks();
 });
