@@ -6,18 +6,19 @@ chrome.extension.sendRequest({method: "getLocalStorage", key: "jira"}, function(
         const jira = response.data + '/browse/';
 
         // selectors in which to look for jira issues
-        const selectors = $('h1.gh-header-title, p.commit-title');
+        const $selectors = $('h1.gh-header-title, p.commit-title');
 
-        selectors.each(function(){
-            var self = $(this);
-            if(self.attr("tagName") == 'A') { return; }
+        $selectors.each(function(){
+            var $self = $(this);
+            if($self.attr("tagName") == 'A') { return; }
 
-            var match = pattern.exec(self.text());
+            var match = pattern.exec($self.text());
             if(match[1]) {
-                // @todo this doesn't work with multiple matches in the same text
-                self.html($(this).text().replace(
+                $self.html($self.text().replace(
                     pattern,
-                    ' <a style="" target="_blank" href="' + jira + match[1] + '">' + match[1] + '</a>'
+                    function (p1) {
+                        return ' <a target="_blank" href="' + jira + p1 + '">' + p1 + '</a>';
+                    }
                 ));
             }
         });
