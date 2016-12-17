@@ -24,9 +24,6 @@ chrome.extension.sendRequest({method: "getLocalStorage", key: "jira"}, function(
         });
     };
 
-    $('#js-repo-pjax-container').on('pjax:end', function() {
-        replaceLinks();
-    });
-
+    $('#js-repo-pjax-container').on('pjax:end', replaceLinks);
     replaceLinks();
 });
