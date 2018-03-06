@@ -17,7 +17,7 @@ chrome.extension.sendRequest({method: "getLocalStorage", key: "jira"}, function(
                 $self.html($self.text().replace(
                     pattern,
                     function (p1) {
-                        return ' <a target="_blank" href="' + jira + p1 + '">' + p1 + '</a>';
+                        return '<a target="_blank" href="' + jira + p1 + '">' + p1 + '</a>';
                     }
                 ));
             }
